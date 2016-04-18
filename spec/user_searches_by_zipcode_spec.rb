@@ -7,7 +7,7 @@ describe "User searches by zip code and sees 10 closest staions", :type => :feat
 
   it "orders by /last name" do
     visit "/"
-    fill_in "zip_code", with: 80203
+    fill_in "q", with: 80203
     click_on "Locate"
     expect(current_path).to eq "/search?zip=80203"
     # // expect(page).to have_content ""
